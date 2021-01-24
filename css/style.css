@@ -1,0 +1,80 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: "Blackout-Midnight";
+	src: url('blackout_midnight.ttf');
+}
+
+#digital-body {
+	position: absolute;
+	width: 360px;
+	height: 360px;
+	top: 0px;
+	left: 0px;
+	background-size: 100%;
+	background-repeat: repeat;
+	overflow: hidden;
+}
+
+/*
+hour&minutes
+*/
+#rec-time {
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#str-hours {
+	font-family: Blackout-Midnight;
+	font-size: 550%;
+	margin-bottom:10px;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	text-align: center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#str-minutes {
+	font-family: Blackout-Midnight;
+	font-size: 550%;
+	color: white;
+	text-align: center;
+}
+
+/*
+string day & month
+*/
+#rec-data {
+	position: fixed;
+	left: 50%;
+	bottom: 0px;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+
+#str-day {
+	font-size: 150%;
+	margin-bottom:10px;
+	color: white;
+}
+
+#str-battery {
+	font-size: 150%;
+	color: white;
+	text-align: center;
+}
+
+@media screen and (-tizen-geometric-shape: circle) {
+	#str-hours {
+		font-size: 600%;
+	}
+	#str-minutes {
+		font-size: 600%;
+	}
+}
